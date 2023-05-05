@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="running_label">FTP Server</string>
+    <string name="running_summary_stopped">Toggle the state of the ftp server</string>
+    <string name="running_summary_started">at %s</string>
+    <string name="running_summary_failed">Failed to start the FTP server, not connected to the local network (wifi or ethernet)?</string>a
+    <string name="settings_label">CONNECTION SETTINGS</string>
+    <string name="user_label">User</string>
+    <string name="loginsettings_label">Login settings...</string>
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="show_password_label">Display password</string>
+    <string name="anonymous_label">Anonymous</string>
+    <string name="allow_anonymous_label">Allow anonymous login</string>
+    <string name="anonymous_summary">Anonymous logins are only allowed read access</string>
+    <string name="advancedsettings_label">Advanced settings...</string>
+    <string name="portnumber_label">Port Number</string>
+    <string name="chroot_label">Stay in folder</string>
+    <string name="wakelock_label">Keep device awake (full CPU speed)</string>
+    <string name="hotspotsettings_label">Hotspot settings...</string>
+    <string name="hotspotsettings_android_oreo_info">Not configurable from Android 8.0 onwards. Use system settings screen to setup hotspot settings.</string>
+    <string name="hotspot_label">Hotspot</string>
+    <string name="ssid_label">SSID</string>
+    <string name="channel_label">WiFi Channel</string>
+    <string name="iothubsettings_label">IoTHUB settings...</string>
+    <string name="iothub_label">IoTHUB</string>
+    <string name="iothub_url_label">URL</string>
+    <string name="wpa_label">WAP/WEP</string>
+    <string name="notif_server_starting">Starting at %s</string>
+    <string name="notif_title">FTP Server is running</string>
+    <string name="notif_text">at %s</string>
+    <string name="notif_stop_text">Stop server</string>
+
+    <string name="select">Select</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="autoconnect_label">Autoconnect settings...</string>
+    <string name="autoconnect_summary">Select the wifi networks on which to autoconnect</string>
+    <string name="autoconnect_error_enable_wifi_for_access_points">
+        Enable wifi to get list of access points
+    </string>
+
+    <!-- old strings -->
+    <string name="cant_get_url">Can\'t retrieve url</string>
+    <string name="username_validation_error">The password must consist of 1 or more alphanumeric characters. No other characters are allowed.</string>
+    <string name="port_validation_error">The port number must be in the range 1 to 65535.</string>
+    <string name="storage_warning">Warning: storage is not available. You may want to unmount it.</string>
+    <string name="notif_settings_text">Settings</string>
+
+    <string name="app_name">Sandvik DataBearer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="optimine_connection">OptiMine Connection</string>
+    <string name="iothub_connection">IoT HUB Connection</string>
+
+    <string name="app_not_supported">Application is not supported</string>
+    <string name="android_version_not_supported">The application doesn\'t support\nAndroid version: %s</string>
+    <string name="battery_optimization_info_3">You must disable battery optimizations for Sandvik DataBearer manually, otherwise it might not work properly.</string>
+    <string name="battery_optimization_info_2">Please mark Sandvik DataBearer as not optimized in the next screen.</string>
+    <string name="battery_optimization_info_1">You must disable battery optimizations for DataBearer to function properly.</string>
+</resources>
+
+

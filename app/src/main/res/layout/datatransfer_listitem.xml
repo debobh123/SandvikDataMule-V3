@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:textColor="#000000"
+    >
+
+    <!-- machine label, contains serial number -->
+    <TextView
+        android:id="@+id/dataTransferList_machineLabel"
+        android:text="Machine Label"
+        android:textColor="#000000"
+        android:textSize="20dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- "Receiving files / Sending files" row -->
+    <LinearLayout
+        android:id="@+id/dataTransferList_connectionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dataTransferList_machineLabel">
+
+        <!-- only one of these is visible at same time -->
+        <TextView
+            android:id="@+id/dataTransferList_receivingFilesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receiving files"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:id="@+id/dataTransferList_sendingFilesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sending files"
+            android:visibility="gone"
+            android:textColor="#000000"
+            />
+    </LinearLayout>
+
+    <!-- "nn received files" row -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataTransferList_receivedFilesRow"
+        android:layout_below="@+id/dataTransferList_connectionStatus"
+        >
+        <TextView
+            android:id="@+id/dataTransferList_receivedFilesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" received files"
+            android:textColor="#000000"
+            />
+    </LinearLayout>
+
+    <!-- "nn outgoing files" row -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataTransferList_outgoingFilesRow"
+        android:layout_below="@+id/dataTransferList_receivedFilesRow"
+        >
+        <TextView
+            android:id="@+id/dataTransferList_outgoingFilesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:text="0"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:text=" outgoing files"
+            />
+    </LinearLayout>
+
+    <!-- machine connection state icon -->
+    <ImageView
+        android:id="@+id/dataTransferList_machineConnStateIcon"
+        android:layout_width="6mm"
+        android:layout_height="6mm"
+        android:src="@drawable/sendreceive_100x100"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@+id/dataTransferList_machineLabel"
+        android:layout_centerVertical="false"
+        android:foregroundGravity="right"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        />
+
+</RelativeLayout>

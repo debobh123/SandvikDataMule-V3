@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:id="@+id/logViewFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <com.sandvik.optimine.datamule.gui.log.LogView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#0099ff"
+        android:elevation="4dp"
+        android:title=""
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="15mm"
+            android:src="@drawable/sandviklogo"
+            android:foregroundGravity="left"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DataBearer"
+            android:layout_marginLeft="30dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <!-- This layout is used only to add 10dp padding to left -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        >
+
+
+        <TextView
+            android:id="@+id/connectionTypeHeader"
+            android:text="@string/optimine_connection"
+            android:layout_marginTop="2mm"
+            android:theme="@style/H1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/headerMobileOutbox"
+            android:text="Mobile outbox"
+            android:layout_marginTop="2mm"
+            android:theme="@style/H2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- holds outbox file count and label for it -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/headerMobileOutbox"
+            android:id="@+id/pendingReportsLayout"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/pendingReportsValue"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" pending files"
+                />
+
+        </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cloudConnStateIcon"
+                android:layout_width="6mm"
+                android:layout_height="6mm"
+                android:src="@drawable/pending_black_100x100"
+                android:layout_alignParentEnd="true"
+                android:layout_alignRight="@+id/headerMobileOutbox"
+                android:layout_centerVertical="true"
+                android:foregroundGravity="right"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+
+        </RelativeLayout>
+
+        <!-- horizontal spacer line -->
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#000000"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <!-- layout for "Data Transfer" and Log button row. -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:text="Data Transfer"
+                android:theme="@style/H1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                />
+
+            <Button
+                android:id="@+id/logButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Log"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5mm"
+                android:paddingRight="5mm"
+                android:clickable="true"
+                />
+        </RelativeLayout>
+
+        <ListView
+            android:id = "@+id/dataTransferListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

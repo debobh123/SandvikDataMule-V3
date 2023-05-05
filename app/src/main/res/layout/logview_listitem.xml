@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:textColor="#000000"
+    >
+
+    <!-- machine connection state icon -->
+    <ImageView
+        android:id="@+id/logViewList_fileStateIcon"
+        android:layout_width="6mm"
+        android:layout_height="6mm"
+        android:src="@drawable/sendreceive_100x100"
+        android:layout_centerVertical="false"
+        android:foregroundGravity="left"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/logViewList_fileStateIcon"
+        android:paddingLeft="3mm"
+        >
+        <TextView
+            android:id="@+id/logViewList_filenameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="File name"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:id="@+id/logViewList_machineIdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logViewList_filenameLabel"
+            android:text="Machine ID"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:id="@+id/logViewList_dateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logViewList_machineIdLabel"
+            android:text="01/01/2017 12:00"
+            android:textColor="#000000"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

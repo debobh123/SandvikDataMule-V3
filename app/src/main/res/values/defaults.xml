@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Don't translate the default resources -->
+    <string name="username_default" translatable="false">ftp</string>
+    <string name="password_default" translatable="false">ftp</string>
+    <string name="show_password_default" translatable="false">false</string>
+    <string name="allow_anonymous_default" translatable="false">false</string>
+    <string name="portnumber_default" translatable="false">2121</string>
+    <string name="wakelock_default" translatable="false">true</string>
+    <string name="ssid_default" translatable="false">Sandvik</string>
+    <string name="wpa_default" translatable="false">12345678</string>
+    <string name="server_url_default" translatable="false">http://192.168.1.100</string>
+    <string name="server_type_default">0</string>
+</resources>
